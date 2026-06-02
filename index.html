@@ -1,96 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>popop</title>
-    <link href="css/style.css" rel="stylesheet">
+    
+    <title>콘텐츠 제작부터 자동화까지, 마케팅 기획자 [이름] 포트폴리오</title>
+    <meta name="description" content="어도비 기반의 감각적인 사진·영상 편집 스킬과 업무 효율을 극대화하는 문서/마케팅 자동화 능력을 겸비한 준비된 마케팅 기획자 [이름]의 포트폴리오입니다. 기획부터 제작, 시스템 구축까지 가능한 올라운더의 역량을 확인해 보세요.">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="마케팅 기획자 [이름] 포트폴리오">
+    <meta property="og:description" content="콘텐츠 제작과 자동화 시스템을 구축하는 올라운더 마케팅 기획자">
+    <meta property="og:image" content="[본인 프로필 사진 URL (예: https://yourdomain.com/profile.jpg)]">
+    <meta property="og:url" content="[포트폴리오 웹사이트 주소 (예: https://yourdomain.com)]">
 
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "[신용화]",
+      "alternateName": "MayB]",
+      "jobTitle": "마케팅 기획자 (Marketing Planner & Automator)",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "[인하공전]"
+      },
+      "url": "[https://www.instagram.com/reformation_of_life/]",
+      "sameAs": [
+        "[https://upload.littoon.com/]"
+      ],
+      "description": "어도비 기반의 감각적인 사진·영상 편집 스킬과 업무 효율을 극대화하는 문서/마케팅 자동화 능력을 겸비한 준비된 마케팅 기획자 [신용화]의 포트폴리오입니다. 기획부터 제작, 시스템 구축까지 가능한 올라운더의 역량을 확인해 보세요.",
+      "knowsAbout": [
+        "Marketing Strategy",
+        "Marketing Automation",
+        "Adobe Premiere Pro",
+        "Adobe Photoshop",
+        "Document Automation",
+        "Content Creation"
+      ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Korean"
+        },
+        {
+          "@type": "Language",
+          "name": "English"
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+        header h1 {
+            margin: 10px 0 5px 0;
+            color: #111;
+        }
+        header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        .section {
+            margin: 30px 0;
+        }
+        .section h2 {
+            color: #0076ff;
+            border-left: 4px solid #0076ff;
+            padding-left: 10px;
+            margin-bottom: 15px;
+        }
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tag {
+            background: #eef2f7;
+            color: #334e68;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .links a {
+            display: inline-block;
+            margin-right: 15px;
+            color: #555;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .links a:hover {
+            color: #0076ff;
+        }
+    </style>
 </head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W3BN7VWJ');</script>
-<!-- End Google Tag Manager -->
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3BN7VWJ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    <h1>MY PORTFOLIO</h1>
-    <div class="grid">
-       <!-- PORTFOLIO 01 -->
-       <div class="card" onclick="openModal('img/01.jpg','영상공모전 출품','영상공모전 출품')" >
-         <img class="card-thumb" src="img/01.jpg" alt="01">
-         <div class="card-info">
-            <h3>영상공모전 출품</h3>
-            <span>2026 디마공 연상공모전 대상</span>
-         </div>
-       </div> 
 
-       <!-- PORTFOLIO 02 -->
-       <div class="card" onclick="openModal('img/02.jpg','영상공모전 출품','영상공모전 출품')">
-         <img class="card-thumb" src="img/02.jpg" alt="02">
-         <div class="card-info">
-            <h3>영상공모전 출품</h3>
-            <span>2026 디마공 연상공모전 대상
-                2026 디마공 연상공모전 대상
-            </span>
-         </div>
-       </div> 
+    <div class="container">
+        <header>
+            <h1>[본인 이름]</h1>
+            <p>콘텐츠 제작부터 자동화까지 가능한 올라운더 마케팅 기획자</p>
+        </header>
 
-       <!-- PORTFOLIO 03 -->
-       <div class="card" onclick="openModal('img/03.jpg','영상공모전 출품','영상공모전 출품')">
-         <img class="card-thumb" src="img/03.jpg" alt="03">
-         <div class="card-info">
-            <h3>영상공모전 출품</h3>
-            <span>2026 디마공 연상공모전 대상</span>
-         </div>
-       </div> 
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                전략적인 기획력 위에 실행력을 더하는 마케팅 기획자입니다.<br>
+                <strong>Adobe 크리에이티브 툴</strong>을 활용한 고품질 사진·영상 콘텐츠 제작이 가능하며, 
+                <strong>문서 및 마케팅 자동화</strong> 시스템 구축을 통해 리소스를 낭비하지 않는 효율적인 비즈니스 성장을 추구합니다.
+            </p>
+        </div>
 
-       <!-- PORTFOLIO 04 -->
-       <div class="card" onclick="openModal('img/01.jpg','영상공모전 출품','영상공모전 출품')">
-         <img class="card-thumb" src="img/01.jpg" alt="01">
-         <div class="card-info">
-            <h3>영상공모전 출품</h3>
-            <span>2026 디마공 연상공모전 대상</span>
-         </div>
-       </div> 
+        <div class="section">
+            <h2>Core Skills</h2>
+            <div class="skills-tags">
+                <span class="tag">마케팅 전략 기획</span>
+                <span class="tag">마케팅 자동화 (Marketing Automation)</span>
+                <span class="tag">문서 자동화 (RPA / Work Automation)</span>
+                <span class="tag">Adobe Photoshop / Premiere Pro</span>
+                <span class="tag">콘텐츠 디렉팅 & 제작</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Contact & Links</h2>
+            <div class="links">
+                <a href="mailto:[본인 이메일]" target="_blank">📧 Email</a>
+                <a href="[링크드인 주소]" target="_blank">💼 LinkedIn</a>
+                <a href="[깃허브 또는 블로그 주소]" target="_blank">📝 Blog / GitHub</a>
+            </div>
+        </div>
     </div>
 
-   <!--  모달만들기 -->
-   <div  class="modal-bg" id="modal-bg" onclick="closeModal(event)">
-     <div class="modal">
-       <button class="modal-close" onclick="closeModal()">X</button> 
-       <img class="modal-thumb" id="modal-img" src="" alt="">
-       <div class="modal-body">
-         <h2 id="modal-title"></h2>
-         <p id="modal-desc"></p>
-       </div>
-     </div>
-   </div>
-
-
-
-
- 
-
-<script>
-  function openModal(imgSrc, title, desc) {
-      document.getElementById('modal-img').src = imgSrc;
-      document.getElementById('modal-img').alt = title;
-      document.getElementById('modal-title').textContent = title;
-      document.getElementById('modal-desc').textContent = desc;
-      document.getElementById('modal-bg').classList.add('open');
-    }
-  function closeModal(e) {
-    if (!e || e.target === document.getElementById('modal-bg')) {
-      document.getElementById('modal-bg').classList.remove('open');
-     } 
-    }
-
-</script>
 </body>
 </html>
