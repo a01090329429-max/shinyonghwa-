@@ -3,169 +3,665 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신용화(MayB) Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- [SEO] 타이틀 & 설명 설정 -->
+    <title>콘텐츠 제작자 신용화 | 제작부터 마케팅 자동화까지</title>
+    <meta name="description" content="어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.">
+    
+    <!-- [SEO] 오픈 그래프(OG) 태그: 카톡, SNS 공유용 최적화 -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <meta property="og:title" content="콘텐츠 제작자 신용화 | 제작부터 마케팅 자동화까지">
+    <meta property="og:description" content="어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.">
+    <meta property="og:image" content="[본인 프로필 사진 URL (예: https://yourdomain.com/profile.jpg)]">
+
+    <!-- 구글 폰트 불러오기 (Noto Sans KR, Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- [SEO] 구글 인식을 위한 구조화 데이터 (Schema Markup) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "신용화",
+      "alternateName": "MayB",
+      "image": "C:\Users\PC\Desktop\화면 캡처 2026-05-19 115856.png",
+      "jobTitle": "마케팅 기획자 & 콘텐츠 제작자",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "인하공업전문대학 디지털마케팅공학과"
+      },
+      "url": "https://yourdomain.com",
+      "description": "어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.",
+      "knowsAbout": [
+        "Marketing Strategy",
+        "Marketing Automation",
+        "Adobe Premiere Pro",
+        "Adobe Photoshop",
+        "Document Automation",
+        "Content Creation",
+        "Video Production"
+      ],
+      "knowsLanguage": [
+        {
+          "@type": "Language",
+          "name": "Korean"
+        }
+      ]
+    }
+    </script>
+
+    <!-- [STYLE] 미니멀 & 다크 모던 웹 스타일링 (기존 style.css 통합 대체) -->
+    <style>
+        /* 변수 지정 및 기본 리셋 */
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #161b26;
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+            --accent: #3b82f6;
+            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --font-ko: 'Noto Sans KR', sans-serif;
+            --font-en: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-ko);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-en);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+        }
+
+        /* 1. Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 15, 25, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .header-container {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-en);
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            font-family: var(--font-en);
+            font-size: 1rem;
+            color: var(--text-sub);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--text-main);
+        }
+
+        /* 2. Hero Section (사진+텍스트 비대칭 배치형태로 모던화) */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .hero-tagline {
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        #hero h1 span {
+            font-size: 2.2rem;
+            color: var(--text-sub);
+            font-weight: 400;
+        }
+
+        .hero-motto {
+            font-size: 1.2rem;
+            color: var(--text-sub);
+            margin: 15px 0 30px 0;
+            border-left: 3px solid rgba(255, 255, 255, 0.2);
+            padding-left: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: fit-content;
+            background: var(--accent-gradient);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 30px;
+            font-weight: 500;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Hero 오른쪽 원형 이미지 스페이스 */
+        .hero-image-wrap {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero-circle-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: var(--card-bg); /* 사진 없을 때 기본 배경색 */
+        }
+
+        /* 3. About Me Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.7fr 1.3fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        /* About 왼쪽 사각형 이미지 스페이스 */
+        .about-photo-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: #232a38; /* 사진 들어갈 대체 가이드 공간 */
+        }
+
+        .about-photo-info {
+            padding: 24px;
+        }
+
+        .about-photo-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .about-photo-info p {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .about-photo-info p strong {
+            color: var(--text-sub);
+            margin-right: 5px;
+        }
+
+        /* About 오른쪽 학력 사항 */
+        .about-education {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            height: 100%;
+        }
+
+        .about-education h3 {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-family: var(--font-en);
+        }
+
+        .about-education ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-education li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.05rem;
+        }
+
+        .edu-status {
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-sub);
+        }
+
+        .edu-status.ongoing {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent);
+        }
+
+        /* 4. Experience Section (타임라인 모던 그래픽 디자인) */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 2px;
+            height: 98%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-color);
+            border: 3px solid var(--accent);
+            transition: background 0.3s ease;
+        }
+
+        .timeline-item:hover::before {
+            background: var(--accent);
+        }
+
+        .time {
+            font-family: var(--font-en);
+            font-size: 0.95rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .content {
+            font-size: 1.1rem;
+            color: var(--text-main);
+        }
+
+        /* 5. Awards Section */
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 24px;
+        }
+
+        .award-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .award-date {
+            font-family: var(--font-en);
+            font-size: 0.9rem;
+            color: var(--text-sub);
+            margin-bottom: 12px;
+        }
+
+        .award-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .award-card p {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        /* 6. Skills Section */
+        #skills h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--text-sub);
+            font-family: var(--font-en);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .tag {
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tag.tool:hover {
+            background: rgba(59, 130, 246, 0.1);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .tag.capability:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: #8b5cf6;
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            padding: 50px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: var(--text-sub);
+            font-size: 0.95rem;
+            font-family: var(--font-en);
+        }
+
+        /* 반응형 모바일 최적화 레이아웃 */
+        @media (max-width: 768px) {
+            #hero { padding-top: 100px; text-align: center; }
+            .hero-container { grid-template-columns: 1fr; gap: 40px; }
+            .hero-image-wrap { order: -1; }
+            .hero-circle-img { width: 240px; height: 240px; }
+            #hero h1 { font-size: 2.8rem; }
+            .btn { margin: 0 auto; }
+            .about-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 인하공업전문대학 이동 상단 배너 -->
-    <div class="top-banner" style="background-color: #004b93; color: #ffffff; text-align: center; padding: 10px 0; font-family: 'Noto Sans KR', sans-serif; font-size: 14px; font-weight: 500;">
-        <a href="https://www.inhatc.ac.kr" target="_blank" rel="noopener noreferrer" style="color: #ffffff; text-decoration: none; display: inline-block; transition: opacity 0.2s;">
-            🏫 <strong>인하공업전문대학</strong> 공식 홈페이지 바로가기 <span style="margin-left: 5px; font-size: 11px; opacity: 0.8;">[이동하기 ↗]</span>
-        </a>
-    </div>
-
+    <!-- 헤더 내비게이션[cite: 1] -->
     <header>
         <div class="container header-container">
-            <div class="logo">MayB<span>.</span></div>
+            <div class="logo">MayB<span>.</span></div>[cite: 1]
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#about">About</a></li>[cite: 1]
+                    <li><a href="#experience">Experience</a></li>[cite: 1]
+                    <li><a href="#awards">Awards</a></li>[cite: 1]
+                    <li><a href="#skills">Skills</a></li>[cite: 1]
                 </ul>
             </nav>
         </div>
     </header>
 
+    <!-- Hero 섹션 (원형 프로필 이미지 공간 추가 및 다이내믹 배치)[cite: 1] -->
     <section id="hero">
         <div class="container hero-container">
-            <p class="hero-tagline">Digital Marketing & Video Content Creator</p>
-            <h1>신용화 <span>(MayB)</span></h1>
-            <p class="hero-motto">"창조할 수 있다면 무한히 나아가는 콘텐츠 제작자 신용화(MayB) 입니다."</p>
-            <a href="#about" class="btn">더 알아보기</a>
+            <div class="hero-text">
+                <p class="hero-tagline">Digital Marketing & Video Content Creator</p>[cite: 1]
+                <h1>신용화 <span>(MayB)</span></h1>[cite: 1]
+                <p class="hero-motto">"창조할 수 있다면 무한히 나아가는 콘텐츠 제작자 신용화(MayB) 입니다."</p>[cite: 1]
+                <a href="#about" class="btn">더 알아보기</a>[cite: 1]
+            </div>
+            <div class="hero-image-wrap">
+                <!-- 📸 이미지 경로 수정하는 곳 1 (원형 메인 사진 공간) -->
+                <img src="images/hero-profile.jpg" alt="신용화 프로필 이미지" class="hero-circle-img" onerror="this.style.display='none'">
+            </div>
         </div>
     </section>
 
+    <!-- About 섹션 (스퀘어 프로필 카드 구조 공간 추가)[cite: 1] -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">About Me</h2>[cite: 1]
             <div class="about-grid">
-                <div class="about-info">
-                    <h3>Profile</h3>
-                    <p><strong>이름:</strong> 신용화 (활동명: MayB)</p>
-                    <p><strong>자격증:</strong> GTQ 1급, 사진기능사 실기</p>
+                
+                <!-- 왼쪽: 프로필 이미지 + 상세 인포 카드 배치 -->
+                <div class="about-photo-card">
+                    <!-- 📸 이미지 경로 수정하는 곳 2 (상세 프로필 사진 공간) -->
+                    <div style="width:100%; height:280px; background:#1e2533; display:flex; align-items:center; justify-content:center; color:var(--text-sub); font-size:0.9rem;">
+                        [이곳에 사진을 등록해 주세요]
+                        <!-- 실사용시 위의 <div> 태그를 지우고 아래의 <img> 주석을 해제해 적용하세요. -->
+                        <!-- <img src="images/about-profile.jpg" alt="신용화 프로필" class="about-img"> -->
+                    </div>
+                    <div class="about-photo-info">
+                        <h3>Profile</h3>[cite: 1]
+                        <p><strong>이름:</strong> 신용화 (활동명: MayB)</p>[cite: 1]
+                        <p><strong>자격증:</strong> GTQ 1급, 사진기능사 실기</p>[cite: 1]
+                    </div>
                 </div>
+
+                <!-- 오른쪽: 학력 사항[cite: 1] -->
                 <div class="about-education">
-                    <h3>Education</h3>
+                    <h3>Education</h3>[cite: 1]
                     <ul>
-                        <li><span class="edu-status ongoing">재학중</span> 인하공업전문대학 디지털마케팅공학과</li>
-                        <li><span class="edu-status">중퇴</span> 신안산대학교 영상콘텐츠과</li>
-                        <li><span class="edu-status">수료</span> 인천산업정보학교 사진영상예술과</li>
+                        <li><span class="edu-status ongoing">재학중</span> 인하공업전문대학 디지털마케팅공학과</li>[cite: 1]
+                        <li><span class="edu-status">중퇴</span> 신안산대학교 영상콘텐츠과</li>[cite: 1]
+                        <li><span class="edu-status">수료</span> 인천산업정보학교 사진영상예술과</li>[cite: 1]
                     </ul>
                 </div>
+
             </div>
         </div>
     </section>
 
+    <!-- Experience 섹션[cite: 1] -->
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Experience</h2>[cite: 1]
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="time">2026.03 ~ 2026.05</div>
-                    <div class="content">서부경찰서 가정폭력 예방 산학협력 영상제작</div>
+                    <div class="time">2026.03 ~ 2026.05</div>[cite: 1]
+                    <div class="content">서부경찰서 가정폭력 예방 산학협력 영상제작</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2026.03</div>
-                    <div class="content">이감 홍보 산학협력 영상제작</div>
+                    <div class="time">2026.03</div>[cite: 1]
+                    <div class="content">이감 홍보 산학협력 영상제작</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2026.02 ~ 진행중</div>
-                    <div class="content">폴럽이글루 공식 숏폼 크리에이터 활동</div>
+                    <div class="time">2026.02 ~ 진행중</div>[cite: 1]
+                    <div class="content">폴럽이글루 공식 숏폼 크리에이터 활동</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2025.10 ~ 2026.04</div>
-                    <div class="content">단편영화 “빛이 머무는 자리” 연출</div>
+                    <div class="time">2025.10 ~ 2026.04</div>[cite: 1]
+                    <div class="content">단편영화 “빛이 머무는 자리” 연출</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2024.07 ~ 2025.01</div>
-                    <div class="content">멀티미디어 제작 동아리 “소우주” 자체 운영</div>
+                    <div class="time">2024.07 ~ 2025.01</div>[cite: 1]
+                    <div class="content">멀티미디어 제작 동아리 “소우주” 자체 운영</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2024.08</div>
-                    <div class="content">드라마 “나미브” 아이돌 연습생 역 보조출연</div>
+                    <div class="time">2024.08</div>[cite: 1]
+                    <div class="content">드라마 “나미브” 아이돌 연습생 역 보조출연</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2024.03 ~ 2024.08</div>
-                    <div class="content">댄스팀 “BLAST” 콘텐츠매니저 활동</div>
+                    <div class="time">2024.03 ~ 2024.08</div>[cite: 1]
+                    <div class="content">댄스팀 “BLAST” 콘텐츠매니저 활동</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2023.06 ~ 09</div>
-                    <div class="content">유튜브 크리에이터 동아리 스텔러</div>
+                    <div class="time">2023.06 ~ 09</div>[cite: 1]
+                    <div class="content">유튜브 크리에이터 동아리 스텔러</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2022.08 ~ 11</div>
-                    <div class="content">한중고교 글로벌 프로스쿨 영상제작/연극 배우 담당</div>
+                    <div class="time">2022.08 ~ 11</div>[cite: 1]
+                    <div class="content">한중고교 글로벌 프로스쿨 영상제작/연극 배우 담당</div>[cite: 1]
                 </div>
                 <div class="timeline-item">
-                    <div class="time">2022.08 ~ 09</div>
-                    <div class="content">한예진 전국고교 여름방송캠프 유튜브분야 교육이수</div>
+                    <div class="time">2022.08 ~ 09</div>[cite: 1]
+                    <div class="content">한예진 전국고교 여름방송캠프 유튜브분야 교육이수</div>[cite: 1]
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Awards 섹션[cite: 1] -->
     <section id="awards">
         <div class="container">
-            <h2 class="section-title">Awards</h2>
+            <h2 class="section-title">Awards</h2>[cite: 1]
             <div class="awards-grid">
                 <div class="award-card">
-                    <div class="award-date">2024.08</div>
-                    <h4>서울예대 동랑청소년종합예술제</h4>
-                    <p>단편영화 출연 부문 열심히상</p>
+                    <div class="award-date">2024.08</div>[cite: 1]
+                    <h4>서울예대 동랑청소년종합예술제</h4>[cite: 1]
+                    <p>단편영화 출연 부문 열심히상</p>[cite: 1]
                 </div>
                 <div class="award-card">
-                    <div class="award-date">2023.12</div>
-                    <h4>인천 인권 공익콘텐츠 공모전</h4>
-                    <p>청소년 영상콘텐츠 부문 최우수상</p>
+                    <div class="award-date">2023.12</div>[cite: 1]
+                    <h4>인천 인권 공익콘텐츠 공모전</h4>[cite: 1]
+                    <p>청소년 영상콘텐츠 부문 최우수상</p>[cite: 1]
                 </div>
                 <div class="award-card">
-                    <div class="award-date">2023.10</div>
-                    <h4>사진영상예술과 경진대회</h4>
-                    <p>영상제작부문 금상</p>
+                    <div class="award-date">2023.10</div>[cite: 1]
+                    <h4>사진영상예술과 경진대회</h4>[cite: 1]
+                    <p>영상제작부문 금상</p>[cite: 1]
                 </div>
                 <div class="award-card">
-                    <div class="award-date">2023.08</div>
-                    <h4>사진영상예술과</h4>
-                    <p>포트폴리오 장려상</p>
+                    <div class="award-date">2023.08</div>[cite: 1]
+                    <h4>사진영상예술과</h4>[cite: 1]
+                    <p>포트폴리오 장려상</p>[cite: 1]
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills 섹션[cite: 1] -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Capabilities</h2>
+            <h2 class="section-title">Skills & Capabilities</h2>[cite: 1]
             
-            <h3>Software Tools</h3>
+            <h3>Software Tools</h3>[cite: 1]
             <div class="skills-tags">
-                <span class="tag tool">어도비 프리미어 프로</span>
-                <span class="tag tool">어도비 애프터이펙트</span>
-                <span class="tag tool">어도비 포토샵</span>
-                <span class="tag tool">어도비 라이트룸</span>
-                <span class="tag tool">어도비 일러스트레이터</span>
-                <span class="tag tool">피그마 (Figma)</span>
-                <span class="tag tool">캔바 (Canva)</span>
+                <span class="tag tool">어도비 프리미어 프로</span>[cite: 1]
+                <span class="tag tool">어도비 애프터이펙트</span>[cite: 1]
+                <span class="tag tool">어도비 포토샵</span>[cite: 1]
+                <span class="tag tool">어도비 라이트룸</span>[cite: 1]
+                <span class="tag tool">어도비 일러스트레이터</span>[cite: 1]
+                <span class="tag tool">피그마 (Figma)</span>[cite: 1]
+                <span class="tag tool">캔바 (Canva)</span>[cite: 1]
             </div>
 
-            <h3 style="margin-top: 40px;">Expertise</h3>
+            <h3 style="margin-top: 40px;">Expertise</h3>[cite: 1]
             <div class="skills-tags">
-                <span class="tag capability">영화영상</span>
-                <span class="tag capability">실용사진</span>
-                <span class="tag capability">AI툴 활용</span>
-                <span class="tag capability">SNS마케팅</span>
-                <span class="tag capability">캐릭터디자인</span>
-                <span class="tag capability">타이포그래피</span>
+                <span class="tag capability">영화영상</span>[cite: 1]
+                <span class="tag capability">실용사진</span>[cite: 1]
+                <span class="tag capability">AI툴 활용</span>[cite: 1]
+                <span class="tag capability">SNS마케팅</span>[cite: 1]
+                <span class="tag capability">캐릭터디자인</span>[cite: 1]
+                <span class="tag capability">타이포그래피</span>[cite: 1]
             </div>
         </div>
     </section>
 
+    <!-- 푸터[cite: 1] -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Shin Yong Hwa (MayB). All rights reserved.</p>
+            <p>&copy; 2026 Shin Yong Hwa (MayB). All rights reserved.</p>[cite: 1]
         </div>
     </footer>
 
