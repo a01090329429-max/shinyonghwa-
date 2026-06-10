@@ -3,666 +3,701 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신용화 (MayB) | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- [SEO] 타이틀 & 설명 설정 -->
-    <title>콘텐츠 제작자 신용화 | 제작부터 마케팅 자동화까지</title>
-    <meta name="description" content="어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.">
-    
-    <!-- [SEO] 오픈 그래프(OG) 태그: 카톡, SNS 공유용 최적화 -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourdomain.com">
-    <meta property="og:title" content="콘텐츠 제작자 신용화 | 제작부터 마케팅 자동화까지">
-    <meta property="og:description" content="어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.">
-    <meta property="og:image" content="[본인 프로필 사진 URL (예: https://yourdomain.com/profile.jpg)]">
-
-    <!-- 구글 폰트 불러오기 (Noto Sans KR, Poppins) -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- [SEO] 구글 인식을 위한 구조화 데이터 (Schema Markup) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "신용화",
-      "alternateName": "MayB",
-      "image": "C:\Users\PC\Desktop\화면 캡처 2026-05-19 115856.png",
-      "jobTitle": "마케팅 기획자 & 콘텐츠 제작자",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "인하공업전문대학 디지털마케팅공학과"
-      },
-      "url": "https://yourdomain.com",
-      "description": "어도비 기반의 콘텐츠 제작 역량과 마케팅/문서 자동화 기술을 겸비한 다재다능한 성장형 마케팅 기획자 신용화입니다.",
-      "knowsAbout": [
-        "Marketing Strategy",
-        "Marketing Automation",
-        "Adobe Premiere Pro",
-        "Adobe Photoshop",
-        "Document Automation",
-        "Content Creation",
-        "Video Production"
-      ],
-      "knowsLanguage": [
-        {
-          "@type": "Language",
-          "name": "Korean"
-        }
-      ]
-    }
-    </script>
-
-    <!-- [STYLE] 미니멀 & 다크 모던 웹 스타일링 (기존 style.css 통합 대체) -->
     <style>
-        /* 변수 지정 및 기본 리셋 */
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: #161b26;
-            --text-main: #f3f4f6;
-            --text-sub: #9ca3af;
-            --accent: #3b82f6;
-            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            --font-ko: 'Noto Sans KR', sans-serif;
-            --font-en: 'Poppins', sans-serif;
+            --bg-color: #0b0c10;
+            --secondary-bg: #1f2833;
+            --text-color: #c5a880; 
+            --main-accent: #66fcf1; /* 감각적인 네온 시안 */
+            --light-text: #ffffff;
+            --muted-text: #95a5a6;
+            --instagram-color: #e1306c;
+            --link-color: #2ecc71;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
 
         body {
+            font-family: 'Noto Sans KR', 'Montserrat', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-ko);
-            line-height: 1.7;
+            color: var(--light-text);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1100px;
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* 네비게이션 바 */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(11, 12, 16, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
         }
 
-        a {
-            color: inherit;
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--main-accent);
+        }
+
+        .logo span {
+            color: var(--light-text);
+            font-size: 1rem;
+            font-weight: 300;
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 30px;
+        }
+
+        nav ul li a {
+            color: var(--light-text);
             text-decoration: none;
-            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            font-weight: 400;
+            transition: color 0.3s;
+            letter-spacing: 1px;
         }
 
+        nav ul li a:hover {
+            color: var(--main-accent);
+        }
+
+        /* 공통 섹션 스타일 */
         section {
-            padding: 100px 0;
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-title {
-            font-family: var(--font-en);
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 50px;
             position: relative;
             display: inline-block;
+            letter-spacing: 2px;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
             left: 0;
-            bottom: -8px;
-            width: 40px;
+            bottom: -10px;
+            width: 50%;
             height: 4px;
-            background: var(--accent-gradient);
-            border-radius: 2px;
+            background-color: var(--main-accent);
         }
 
-        /* 1. Header Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(11, 15, 25, 0.8);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .header-container {
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: var(--font-en);
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            font-family: var(--font-en);
-            font-size: 1rem;
-            color: var(--text-sub);
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: var(--text-main);
-        }
-
-        /* 2. Hero Section (사진+텍스트 비대칭 배치형태로 모던화) */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 120px;
-            background: radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
-        }
-
-        .hero-container {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            align-items: center;
-            gap: 40px;
-        }
-
-        .hero-text {
+        /* 홈 섹션 */
+        #home {
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
         }
 
-        .hero-tagline {
-            font-family: var(--font-en);
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .intro-text {
+            font-size: 1.2rem;
+            color: var(--main-accent);
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
         }
 
-        #hero h1 {
+        #home h1 {
             font-size: 4rem;
             font-weight: 700;
+            margin-bottom: 20px;
             line-height: 1.2;
         }
 
-        #hero h1 span {
-            font-size: 2.2rem;
-            color: var(--text-sub);
-            font-weight: 400;
+        .motto {
+            font-size: 1.5rem;
+            color: var(--muted-text);
+            max-width: 800px;
+            border-left: 3px solid var(--main-accent);
+            padding-left: 20px;
+            margin-bottom: 40px;
+            font-weight: 300;
         }
 
-        .hero-motto {
-            font-size: 1.2rem;
-            color: var(--text-sub);
-            margin: 15px 0 30px 0;
-            border-left: 3px solid rgba(255, 255, 255, 0.2);
-            padding-left: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            width: fit-content;
-            background: var(--accent-gradient);
-            color: #fff;
-            padding: 14px 32px;
-            border-radius: 30px;
-            font-weight: 500;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(59, 130, 246, 0.5);
-        }
-
-        /* Hero 오른쪽 원형 이미지 스페이스 */
-        .hero-image-wrap {
+        .btn-group {
             display: flex;
-            justify-content: center;
-            position: relative;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .hero-circle-img {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-            background: var(--card-bg); /* 사진 없을 때 기본 배경색 */
+        .cta-btn {
+            padding: 15px 35px;
+            background-color: transparent;
+            border: 2px solid var(--main-accent);
+            color: var(--main-accent);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        /* 3. About Me Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 0.7fr 1.3fr;
-            gap: 40px;
-            align-items: flex-start;
+        .cta-btn:hover {
+            background-color: var(--main-accent);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.4);
         }
 
-        /* About 왼쪽 사각형 이미지 스페이스 */
-        .about-photo-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .about-img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            background: #232a38; /* 사진 들어갈 대체 가이드 공간 */
-        }
-
-        .about-photo-info {
-            padding: 24px;
-        }
-
-        .about-photo-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--accent);
-        }
-
-        .about-photo-info p {
-            margin-bottom: 8px;
+        /* 소셜 미디어 전용 버튼 스타일 */
+        .social-btn {
+            padding: 15px 25px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
             font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            transition: transform 0.3s, filter 0.3s;
         }
 
-        .about-photo-info p strong {
-            color: var(--text-sub);
-            margin-right: 5px;
+        .social-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
         }
 
-        /* About 오른쪽 학력 사항 */
-        .about-education {
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            height: 100%;
+        .social-btn.littly {
+            background-color: #111111;
+            border: 1px solid rgba(255,255,255,0.2);
         }
 
-        .about-education h3 {
+        .social-btn:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        /* 프로필 섹션 */
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-grid { grid-template-columns: 1fr; }
+            #home h1 { font-size: 2.8rem; }
+        }
+
+        .info-box h3 {
             font-size: 1.5rem;
             margin-bottom: 25px;
-            font-family: var(--font-en);
+            color: var(--main-accent);
         }
 
-        .about-education ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .info-item {
+            margin-bottom: 20px;
         }
 
-        .about-education li {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1.05rem;
-        }
-
-        .edu-status {
-            padding: 4px 12px;
-            border-radius: 6px;
-            font-size: 0.8rem;
+        .info-item .label {
             font-weight: 700;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-sub);
-        }
-
-        .edu-status.ongoing {
-            background: rgba(59, 130, 246, 0.15);
-            color: var(--accent);
-        }
-
-        /* 4. Experience Section (타임라인 모던 그래픽 디자인) */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 5px;
-            width: 2px;
-            height: 98%;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 35px;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -35px;
-            top: 6px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--bg-color);
-            border: 3px solid var(--accent);
-            transition: background 0.3s ease;
-        }
-
-        .timeline-item:hover::before {
-            background: var(--accent);
-        }
-
-        .time {
-            font-family: var(--font-en);
-            font-size: 0.95rem;
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .content {
-            font-size: 1.1rem;
-            color: var(--text-main);
-        }
-
-        /* 5. Awards Section */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 24px;
-        }
-
-        .award-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-
-        .award-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(59, 130, 246, 0.3);
-        }
-
-        .award-date {
-            font-family: var(--font-en);
+            color: var(--muted-text);
+            display: block;
             font-size: 0.9rem;
-            color: var(--text-sub);
-            margin-bottom: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
         }
 
-        .award-card h4 {
-            font-size: 1.15rem;
-            margin-bottom: 8px;
-            font-weight: 600;
+        .info-item .value {
+            font-size: 1.1rem;
         }
 
-        .award-card p {
-            font-size: 0.95rem;
-            color: var(--text-sub);
+        /* 인라인 링크 버튼 스타일 */
+        .inline-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
         }
 
-        /* 6. Skills Section */
-        #skills h3 {
+        .inline-link {
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            color: #fff;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background 0.3s;
+        }
+
+        .inline-link.ig { background-color: rgba(225, 48, 108, 0.2); border: 1px solid var(--instagram-color); color: #fd5949; }
+        .inline-link.ig:hover { background-color: var(--instagram-color); color: #fff; }
+
+        .inline-link.lt { background-color: rgba(102, 252, 241, 0.1); border: 1px solid var(--main-accent); color: var(--main-accent); }
+        .inline-link.lt:hover { background-color: var(--main-accent); color: var(--bg-color); }
+
+        .edu-timeline {
+            border-left: 2px solid var(--secondary-bg);
+            padding-left: 20px;
+            margin-left: 5px;
+        }
+
+        .edu-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .edu-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--main-accent);
+        }
+
+        .edu-date {
+            font-size: 0.85rem;
+            color: var(--main-accent);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* 역량 */
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .skills-container { grid-template-columns: 1fr; }
+        }
+
+        .skill-category h3 {
             font-size: 1.3rem;
             margin-bottom: 20px;
-            color: var(--text-sub);
-            font-family: var(--font-en);
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--secondary-bg);
+            padding-bottom: 10px;
+            color: var(--main-accent);
         }
 
-        .skills-tags {
+        .program-tags, .ability-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
         }
 
         .tag {
+            background-color: var(--secondary-bg);
             padding: 10px 20px;
-            border-radius: 30px;
+            border-radius: 50px;
             font-size: 0.95rem;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .tag:hover {
+            border-color: var(--main-accent);
+            color: var(--main-accent);
+            transform: translateY(-3px);
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            padding: 12px 15px;
+            background-color: var(--secondary-bg);
+            margin-bottom: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cert-list li i {
+            color: var(--main-accent);
+        }
+
+        /* 경력 및 수상경력 */
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-card {
+            background-color: var(--secondary-bg);
+            padding: 25px;
+            border-radius: 6px;
+            border-left: 4px solid var(--main-accent);
+            transition: transform 0.3s;
+        }
+
+        .timeline-card:hover {
+            transform: translateX(5px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .card-header { flex-direction: column; align-items: flex-start; gap: 5px; }
+        }
+
+        .card-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--main-accent);
             font-weight: 500;
-            background: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
         }
 
-        .tag.tool:hover {
-            background: rgba(59, 130, 246, 0.1);
-            border-color: var(--accent);
-            color: #fff;
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
         }
 
-        .tag.capability:hover {
-            background: rgba(139, 92, 246, 0.1);
-            border-color: #8b5cf6;
-            color: #fff;
-        }
-
-        /* Footer */
-        footer {
-            padding: 50px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            color: var(--text-sub);
+        .card-subtitle {
             font-size: 0.95rem;
-            font-family: var(--font-en);
+            color: var(--muted-text);
         }
 
-        /* 반응형 모바일 최적화 레이아웃 */
-        @media (max-width: 768px) {
-            #hero { padding-top: 100px; text-align: center; }
-            .hero-container { grid-template-columns: 1fr; gap: 40px; }
-            .hero-image-wrap { order: -1; }
-            .hero-circle-img { width: 240px; height: 240px; }
-            #hero h1 { font-size: 2.8rem; }
-            .btn { margin: 0 auto; }
-            .about-grid { grid-template-columns: 1fr; }
-            .section-title { font-size: 2rem; }
+        /* 푸터 소셜 링크 */
+        .footer-socials {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-socials a {
+            color: var(--muted-text);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--main-accent);
+        }
+
+        footer {
+            background-color: #050608;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            color: var(--muted-text);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        .footer-brand {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--light-text);
+            font-weight: 500;
         }
     </style>
 </head>
 <body>
 
-    <!-- 헤더 내비게이션[cite: 1] -->
     <header>
-        <div class="container header-container">
-            <div class="logo">MayB<span>.</span></div>[cite: 1]
+        <div class="nav-container">
+            <div class="logo">MayB<span>| 신용화</span></div>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>[cite: 1]
-                    <li><a href="#experience">Experience</a></li>[cite: 1]
-                    <li><a href="#awards">Awards</a></li>[cite: 1]
-                    <li><a href="#skills">Skills</a></li>[cite: 1]
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#awards">Awards</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero 섹션 (원형 프로필 이미지 공간 추가 및 다이내믹 배치)[cite: 1] -->
-    <section id="hero">
-        <div class="container hero-container">
-            <div class="hero-text">
-                <p class="hero-tagline">Digital Marketing & Video Content Creator</p>[cite: 1]
-                <h1>신용화 <span>(MayB)</span></h1>[cite: 1]
-                <p class="hero-motto">"창조할 수 있다면 무한히 나아가는 콘텐츠 제작자 신용화(MayB) 입니다."</p>[cite: 1]
-                <a href="#about" class="btn">더 알아보기</a>[cite: 1]
-            </div>
-            <div class="hero-image-wrap">
-                <!-- 📸 이미지 경로 수정하는 곳 1 (원형 메인 사진 공간) -->
-                <img src="images/hero-profile.jpg" alt="신용화 프로필 이미지" class="hero-circle-img" onerror="this.style.display='none'">
-            </div>
+    <section id="home">
+        <p class="intro-text">CREATIVE CONTENT CREATOR</p>
+        <h1>신용화<br>포트폴리오 웹사이트</h1>
+        <p class="motto">"창조할 수 있다면 무한히 나아가는 콘텐츠 제작자 신용화(MayB) 입니다."</p>
+        
+        <div class="btn-group">
+            <a href="#profile" class="cta-btn">프로필 보기 <i class="fas fa-arrow-down"></i></a>
+            <a href="https://instagram.com/본인아이디" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Instagram 바로가기
+            </a>
+            <a href="https://litt.ly/본인주소" target="_blank" class="social-btn littly">
+                <i class="fas fa-link"></i> Littly(릿툰) 바로가기
+            </a>
         </div>
     </section>
 
-    <!-- About 섹션 (스퀘어 프로필 카드 구조 공간 추가)[cite: 1] -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>[cite: 1]
-            <div class="about-grid">
-                
-                <!-- 왼쪽: 프로필 이미지 + 상세 인포 카드 배치 -->
-                <div class="about-photo-card">
-                    <!-- 📸 이미지 경로 수정하는 곳 2 (상세 프로필 사진 공간) -->
-                    <div style="width:100%; height:280px; background:#1e2533; display:flex; align-items:center; justify-content:center; color:var(--text-sub); font-size:0.9rem;">
-                        [이곳에 사진을 등록해 주세요]
-                        <!-- 실사용시 위의 <div> 태그를 지우고 아래의 <img> 주석을 해제해 적용하세요. -->
-                        <!-- <img src="images/about-profile.jpg" alt="신용화 프로필" class="about-img"> -->
+    <section id="profile">
+        <h2 class="section-title">PROFILE</h2>
+        <div class="profile-grid">
+            <div class="info-box">
+                <h3>Personal Info</h3>
+                <div class="info-item">
+                    <span class="label">이름 / 활동명</span>
+                    <span class="value">신용화 (MayB)</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">포지션</span>
+                    <span class="value">영화 연출 / 영상 제작자 / 디지털 마케터</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Social & Links</span>
+                    <div class="inline-links">
+                        <a href="https://instagram.com/본인아이디" target="_blank" class="inline-link ig">
+                            <i class="https://www.instagram.com/reformation_of_life/"></i> 인스타그램
+                        </a>
+                        <a href="https://upload.littoon.com/" target="_blank" class="inline-link lt">
+                            <i class="fas fa-external-link-alt"></i> 릿툰 리틀리
+                        </a>
                     </div>
-                    <div class="about-photo-info">
-                        <h3>Profile</h3>[cite: 1]
-                        <p><strong>이름:</strong> 신용화 (활동명: MayB)</p>[cite: 1]
-                        <p><strong>자격증:</strong> GTQ 1급, 사진기능사 실기</p>[cite: 1]
+                </div>
+            </div>
+            <div class="info-box">
+                <h3>Education</h3>
+                <div class="edu-timeline">
+                    <div class="edu-item">
+                        <span class="edu-date">현재 재학중</span>
+                        <div class="card-title">인하공업전문대학</div>
+                        <div class="card-subtitle">디지털마케팅공학과 재학</div>
+                    </div>
+                    <div class="edu-item">
+                        <span class="edu-date">-</span>
+                        <div class="card-title">신안산대학교</div>
+                        <div class="card-subtitle">영상콘텐츠과 중퇴</div>
+                    </div>
+                    <div class="edu-item">
+                        <span class="edu-date">-</span>
+                        <div class="card-title">인천산업정보학교</div>
+                        <div class="card-subtitle">사진영상예술과 수료</div>
                     </div>
                 </div>
-
-                <!-- 오른쪽: 학력 사항[cite: 1] -->
-                <div class="about-education">
-                    <h3>Education</h3>[cite: 1]
-                    <ul>
-                        <li><span class="edu-status ongoing">재학중</span> 인하공업전문대학 디지털마케팅공학과</li>[cite: 1]
-                        <li><span class="edu-status">중퇴</span> 신안산대학교 영상콘텐츠과</li>[cite: 1]
-                        <li><span class="edu-status">수료</span> 인천산업정보학교 사진영상예술과</li>[cite: 1]
-                    </ul>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Experience 섹션[cite: 1] -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>[cite: 1]
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="time">2026.03 ~ 2026.05</div>[cite: 1]
-                    <div class="content">서부경찰서 가정폭력 예방 산학협력 영상제작</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2026.03</div>[cite: 1]
-                    <div class="content">이감 홍보 산학협력 영상제작</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2026.02 ~ 진행중</div>[cite: 1]
-                    <div class="content">폴럽이글루 공식 숏폼 크리에이터 활동</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2025.10 ~ 2026.04</div>[cite: 1]
-                    <div class="content">단편영화 “빛이 머무는 자리” 연출</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2024.07 ~ 2025.01</div>[cite: 1]
-                    <div class="content">멀티미디어 제작 동아리 “소우주” 자체 운영</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2024.08</div>[cite: 1]
-                    <div class="content">드라마 “나미브” 아이돌 연습생 역 보조출연</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2024.03 ~ 2024.08</div>[cite: 1]
-                    <div class="content">댄스팀 “BLAST” 콘텐츠매니저 활동</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2023.06 ~ 09</div>[cite: 1]
-                    <div class="content">유튜브 크리에이터 동아리 스텔러</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2022.08 ~ 11</div>[cite: 1]
-                    <div class="content">한중고교 글로벌 프로스쿨 영상제작/연극 배우 담당</div>[cite: 1]
-                </div>
-                <div class="timeline-item">
-                    <div class="time">2022.08 ~ 09</div>[cite: 1]
-                    <div class="content">한예진 전국고교 여름방송캠프 유튜브분야 교육이수</div>[cite: 1]
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Awards 섹션[cite: 1] -->
-    <section id="awards">
-        <div class="container">
-            <h2 class="section-title">Awards</h2>[cite: 1]
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-date">2024.08</div>[cite: 1]
-                    <h4>서울예대 동랑청소년종합예술제</h4>[cite: 1]
-                    <p>단편영화 출연 부문 열심히상</p>[cite: 1]
-                </div>
-                <div class="award-card">
-                    <div class="award-date">2023.12</div>[cite: 1]
-                    <h4>인천 인권 공익콘텐츠 공모전</h4>[cite: 1]
-                    <p>청소년 영상콘텐츠 부문 최우수상</p>[cite: 1]
-                </div>
-                <div class="award-card">
-                    <div class="award-date">2023.10</div>[cite: 1]
-                    <h4>사진영상예술과 경진대회</h4>[cite: 1]
-                    <p>영상제작부문 금상</p>[cite: 1]
-                </div>
-                <div class="award-card">
-                    <div class="award-date">2023.08</div>[cite: 1]
-                    <h4>사진영상예술과</h4>[cite: 1]
-                    <p>포트폴리오 장려상</p>[cite: 1]
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills 섹션[cite: 1] -->
     <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Capabilities</h2>[cite: 1]
-            
-            <h3>Software Tools</h3>[cite: 1]
-            <div class="skills-tags">
-                <span class="tag tool">어도비 프리미어 프로</span>[cite: 1]
-                <span class="tag tool">어도비 애프터이펙트</span>[cite: 1]
-                <span class="tag tool">어도비 포토샵</span>[cite: 1]
-                <span class="tag tool">어도비 라이트룸</span>[cite: 1]
-                <span class="tag tool">어도비 일러스트레이터</span>[cite: 1]
-                <span class="tag tool">피그마 (Figma)</span>[cite: 1]
-                <span class="tag tool">캔바 (Canva)</span>[cite: 1]
+        <h2 class="section-title">SKILLS & CAPABILITIES</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>다룰 줄 아는 프로그램 (Software)</h3>
+                <div class="program-tags">
+                    <div class="tag"><i class="fab fa-adobe"></i> 프리미어 프로</div>
+                    <div class="tag"><i class="fab fa-adobe"></i> 애프터이펙트</div>
+                    <div class="tag"><i class="fab fa-adobe"></i> 포토샵</div>
+                    <div class="tag"><i class="fab fa-adobe"></i> 일러스트레이터</div>
+                    <div class="tag"><i class="fab fa-adobe"></i> 라이트룸</div>
+                    <div class="tag"><i class="fab fa-figma"></i> 피그마</div>
+                    <div class="tag"><i class="fas fa-palette"></i> 캔바</div>
+                </div>
             </div>
-
-            <h3 style="margin-top: 40px;">Expertise</h3>[cite: 1]
-            <div class="skills-tags">
-                <span class="tag capability">영화영상</span>[cite: 1]
-                <span class="tag capability">실용사진</span>[cite: 1]
-                <span class="tag capability">AI툴 활용</span>[cite: 1]
-                <span class="tag capability">SNS마케팅</span>[cite: 1]
-                <span class="tag capability">캐릭터디자인</span>[cite: 1]
-                <span class="tag capability">타이포그래피</span>[cite: 1]
+            <div class="skill-category">
+                <h3>전문 역량 (Capabilities)</h3>
+                <div class="ability-tags">
+                    <div class="tag">AI툴 활용</div>
+                    <div class="tag">영화영상 연출</div>
+                    <div class="tag">SNS 마케팅</div>
+                    <div class="tag">실용 사진 촬영</div>
+                    <div class="tag">캐릭터 디자인</div>
+                    <div class="tag">타이포그래피</div>
+                </div>
+            </div>
+            <div class="skill-category" style="grid-column: 1 / -1; margin-top: 20px;">
+                <h3>자격증 (Certifications)</h3>
+                <ul class="cert-list">
+                    <li><i class="fas fa-certificate"></i> GTQ(그래픽기술자격) 1급</li>
+                    <li><i class="fas fa-certificate"></i> 사진기능사 실기</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- 푸터[cite: 1] -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Shin Yong Hwa (MayB). All rights reserved.</p>[cite: 1]
+    <section id="experience">
+        <h2 class="section-title">EXPERIENCE</h2>
+        <div class="timeline-list">
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">단편영화 "블루문"</span>
+                    <span class="card-date">2026.08 (예정)</span>
+                </div>
+                <div class="card-subtitle">영화 연출 및 감독</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">서부경찰서 가정폭력 예방 산학협력</span>
+                    <span class="card-date">2026.03 ~ 2026.05</span>
+                </div>
+                <div class="card-subtitle">가정폭력 예방 영상 콘텐츠 제작</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">1인 독립단편영화 "폭포"</span>
+                    <span class="card-date">2026.05</span>
+                </div>
+                <div class="card-subtitle">영화 기획 및 연출</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">단편영화 "여름밤의 승전가"</span>
+                    <span class="card-date">2026.05.07</span>
+                </div>
+                <div class="card-subtitle">프리프로덕션(Pre-production) 단계 참여</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">이감 홍보 산학협력</span>
+                    <span class="card-date">2026.03</span>
+                </div>
+                <div class="card-subtitle">홍보용 영상 콘텐츠 기획 및 제작</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">폴럽이글루 공식 숏폼 크리에이터</span>
+                    <span class="card-date">2026.02 ~ 진행중</span>
+                </div>
+                <div class="card-subtitle">숏폼 영상 콘텐츠 기획, 편집 및 크리에이터 활동</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">단편영화 "빛이 머무는 자리"</span>
+                    <span class="card-date">2025.10 ~ 2026.04</span>
+                </div>
+                <div class="card-subtitle">영화 총괄 연출(Director)</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">멀티미디어 제작 동아리 "소우주"</span>
+                    <span class="card-date">2024.07 ~ 2025.01</span>
+                </div>
+                <div class="card-subtitle">동아리 자체 운영 및 미디어 콘텐츠 총괄 제작</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">드라마 "나미브" 보조출연</span>
+                    <span class="card-date">2024.08</span>
+                </div>
+                <div class="card-subtitle">아이돌 연습생 역 보조출연 배역 수행</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">댄스팀 "BLAST" 콘텐츠 매니저</span>
+                    <span class="card-date">2024.03 ~ 2024.08</span>
+                </div>
+                <div class="card-subtitle">팀 브랜딩 및 영상 콘텐츠 기획/매니지먼트 활동</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">유튜브 크리에이터 동아리 "스텔러"</span>
+                    <span class="card-date">2023.06 ~ 2023.09</span>
+                </div>
+                <div class="card-subtitle">유튜브 영상 크리에이팅 및 편집 활동</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">한예진 전국고교 여름방송캠프</span>
+                    <span class="card-date">2022.08 ~ 2022.09</span>
+                </div>
+                <div class="card-subtitle">유튜브 분야 전문 교육 과정 수료</div>
+            </div>
+            <div class="timeline-card">
+                <div class="card-header">
+                    <span class="card-title">한중고교 글로벌 프로스쿨</span>
+                    <span class="card-date">2022.08 ~ 2022.11</span>
+                </div>
+                <div class="card-subtitle">영상 제작 및 연극 배우 담당 프로젝트 수행</div>
+            </div>
         </div>
+    </section>
+
+    <section id="awards">
+        <h2 class="section-title">AWARDS</h2>
+        <div class="timeline-list">
+            <div class="timeline-card" style="border-left-color: #f1c40f;">
+                <div class="card-header">
+                    <span class="card-title">서울예대 동랑청소년종합예술제</span>
+                    <span class="card-date">2024.08</span>
+                </div>
+                <div class="card-subtitle">단편영화 출연 부문 - <strong>열심상</strong></div>
+            </div>
+            <div class="timeline-card" style="border-left-color: #f1c40f;">
+                <div class="card-header">
+                    <span class="card-title">인천 인권 공익콘텐츠 공모전</span>
+                    <span class="card-date">2023.12</span>
+                </div>
+                <div class="card-subtitle">청소년 영상콘텐츠 부문 - <strong>최우수상</strong></div>
+            </div>
+            <div class="timeline-card" style="border-left-color: #f1c40f;">
+                <div class="card-header">
+                    <span class="card-title">사진영상예술과 경진대회</span>
+                    <span class="card-date">2023.10</span>
+                </div>
+                <div class="card-subtitle">영상제작부문 - <strong>금상</strong></div>
+            </div>
+            <div class="timeline-card" style="border-left-color: #f1c40f;">
+                <div class="card-header">
+                    <span class="card-title">사진영상예술과 경진대회</span>
+                    <span class="card-date">2023.08</span>
+                </div>
+                <div class="card-subtitle">포트폴리오 부문 - <strong>장려상</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://instagram.com/본인아이디" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://litt.ly/본인주소" target="_blank" title="Littly"><i class="fas fa-link"></i></a>
+        </div>
+        <p class="footer-brand">Shin Yong Hwa — Portfolio 2026</p>
+        <p>© 2026 MayB. All rights reserved.</p>
     </footer>
 
 </body>
